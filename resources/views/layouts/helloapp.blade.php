@@ -4,6 +4,12 @@
 <head>
     <title>@yield('title')</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-size: 16pt;
             color: #999;
@@ -44,6 +50,18 @@
             border-bottom: solid 1px #ccc;
             color: #ccc;
         }
+
+        th {
+            background-color: #999;
+            color: #fff;
+            padding: 5px 10px;
+        }
+
+        td {
+            border: solid 1px #aaa;
+            color: #999;
+            padding: 5px 10px;
+        }
     </style>
 </head>
 
@@ -52,7 +70,9 @@
     @section('menubar')
     <h2 class="menutitle">※メニュー</h2>
     <ul>
-    @show
+        <li>
+            @show
+        </li>
     </ul>
     <hr size="1">
     <div class="content">@yield('content')</div>

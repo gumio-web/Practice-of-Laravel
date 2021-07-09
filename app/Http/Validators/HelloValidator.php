@@ -10,7 +10,7 @@ use Illuminate\Validation\Validator;
  * 以前作成したHelloServiceProviderに組み込んでいく。
  */
 class HelloValidator extends Validator {
-    public function validateHello($attribute, $value, $parameter) {
+    public function validateHello($attribute, $value, $parameters) {
         return $value % 2 == 0;
     }
 }
